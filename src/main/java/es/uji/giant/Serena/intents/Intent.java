@@ -23,14 +23,6 @@ public abstract class Intent {
         return false;
     }
 
-    public boolean userWantsToCancel(String userInput) {
-        boolean cancel = false;
-        if (userInput.equals("cancel") || userInput.equals("cancelar")) {
-            cancel = true;
-        }
-        return cancel;
-    }
-
     public List<GoogleCloudDialogflowV2IntentMessage> generateSSMLAudio(String url, String desc) {
         List<GoogleCloudDialogflowV2IntentMessage> fulfillmentMessages = new ArrayList<>();
         GoogleCloudDialogflowV2IntentMessage message = new GoogleCloudDialogflowV2IntentMessage();
