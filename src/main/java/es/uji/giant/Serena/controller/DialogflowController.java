@@ -29,7 +29,6 @@ public class DialogflowController extends HttpServlet {
 
     @Autowired
     public DialogflowController() {
-        //this.questionnarieDao = questionnarieDao;
         intentFactory = new IntentFactory();
         activeQuestionnaries = new HashMap<>();
     }

@@ -2,8 +2,8 @@ package es.uji.giant.Serena.utils;
 
 public class Constants {
     /* ELASTICSEARCH */
-    public static final String ELASTICSEARCH_TEST_INDEX = "giant_tests";
-    public static final String ELASTICSEARCH_TEST_TYPE = "tests";
+    public static final String ELASTICSEARCH_TEST_INDEX = "serena";
+    public static final String ELASTICSEARCH_TEST_TYPE = "questionnarie";
 
     /* INTENT NAMES */
     public static final String WELCOME_INTENT = "Default Welcome Intent";
@@ -33,7 +33,7 @@ public class Constants {
     public static final String AGE_MP3_URL = "https://www.dropbox.com/s/btqwxu64hndgka0/edad%20en%20formal.mp3?raw=1";
     public static final String AGE_MP3_DESC = "¿Cuál es su edad? Si prefiere no decirla, diga Prefiero no contestar.";
 
-    public static final String ALONE_MP3_URL = "https://www.dropbox.com/s/xfhdw4bhcykmewb/convivencia%20femenino.mp3?raw=1";
+    public static final String ALONE_MP3_URL = "https://www.dropbox.com/s/pn95kvdb92fwue6/convivencia%20neutro.mp3?raw=1";
     public static final String ALONE_MP3_URL_FEM = "https://www.dropbox.com/s/xfhdw4bhcykmewb/convivencia%20femenino.mp3?raw=1";
     public static final String ALONE_MP3_URL_MASC = "https://www.dropbox.com/s/21hhmt6yfz6wc4g/convivencia%20masculino.mp3?raw=1";
     public static final String ALONE_MP3_DESC = "¿Está viviendo sola o solo actualmente? Conteste Sí, No, Prefiero no contestar.";
@@ -77,7 +77,7 @@ public class Constants {
 
     /* Not valid intent MP3 and Descriptions (shown text) */
     public static final String NOT_VALID_SEX_ANSWER = "Tiene que indicar un género válido (Femenino, Masculino, Otro, Prefiero no contestar)";
-    public static final String NOT_VALID_SEX_MP3 = "https://www.dropbox.com/s/5fc5nyoacgxy2vw/andrea_test_min.mp3?raw=1";
+    public static final String NOT_VALID_SEX_MP3 = "https://www.dropbox.com/s/b43gr598bdj4y9t/fallo%20g%C3%A9nero.mp3?raw=1";
 
     public static final String NOT_VALID_AGE_ANSWER = "Tiene que indicar un número válido entre 16 y 105. Si lo prefiere puede indicar Prefiero no contestar";
     public static final String NOT_VALID_AGE_MP3 = "https://www.dropbox.com/s/igsuu0naj85ntju/fallo%20edad.mp3?raw=1";
@@ -89,5 +89,5 @@ public class Constants {
     public static final String NOT_VALID_UCLA_MP3 = "https://www.dropbox.com/s/6m1fozoxsslszjj/ucla%20fallo.mp3?raw=1";
 
     public static final String END_CONVERSATION_DESC = "Gracias por hablar conmigo. Hasta la próxima.";
-    public static final String END_CONVERSATION_MP3 = "https://www.dropbox.com/s/5fc5nyoacgxy2vw/andrea_test_min.mp3?raw=1";
+    public static final String END_CONVERSATION_MP3 = "https://www.dropbox.com/s/6pyz1oopkjjv00z/fin%20despedida.mp3?raw=1";
 }
