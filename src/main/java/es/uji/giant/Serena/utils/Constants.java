@@ -26,68 +26,68 @@ public class Constants {
 
 
     /* Intent MP3 and Descriptions (shown text) */
-    public static final String WELCOME_MP3_URL = "https://www.dropbox.com/s/wts9b23752zg891/intro%20y%20g%C3%A9nero.ogg?raw=1";
+    public static final String WELCOME_MP3_URL = "https://www.dropbox.com/s/k33tx1t6kweak70/Normalizado2_introducci%C3%B3n%20buena.ogg?raw=1";
     public static final String WELCOME_MP3_DESC = "Hola, soy Serena. Estoy aprendiendo a detectar la soledad en las personas. " +
-            "Estoy aquí para conversar con usted. Me podría indicar su género. Conteste: Femenino, Masculino, Otro, Prefiero no contestar";
+            "Me gustaría conversar con usted. ¿Podría indicarme su género? Conteste: Femenino, Masculino, Otro, Prefiero no contestar";
 
-    public static final String AGE_MP3_URL = "https://www.dropbox.com/s/6y1iziog8rit3sm/edad%20en%20formal.ogg?raw=1";
+    public static final String AGE_MP3_URL = "https://www.dropbox.com/s/jf87q3imisxlzmm/Normalizado2_edad.ogg?raw=1";
     public static final String AGE_MP3_DESC = "¿Cuál es su edad? Si prefiere no decirla, diga Prefiero no contestar.";
 
-    public static final String ALONE_MP3_URL = "https://www.dropbox.com/s/v7xpo2vfl6sfplq/convivencia%20neutro.ogg?raw=1";
-    public static final String ALONE_MP3_URL_FEM = "https://www.dropbox.com/s/nk1533vv20b1kxx/convivencia%20femenino.ogg?raw=1";
-    public static final String ALONE_MP3_URL_MASC = "https://www.dropbox.com/s/al7k6s4zr4okzd3/convivencia%20masculino.ogg?raw=1";
-    public static final String ALONE_MP3_DESC = "¿Está viviendo sola o solo actualmente? Conteste Sí, No, Prefiero no contestar.";
-    public static final String ALONE_MP3_DESC_FEM = "¿Está viviendo sola actualmente? Conteste Sí, No, Prefiero no contestar.";
-    public static final String ALONE_MP3_DESC_MASC = "¿Está viviendo solo actualmente? Conteste Sí, No, Prefiero no contestar.";
+    public static final String ALONE_MP3_URL = "https://www.dropbox.com/s/vf4i0oqiygfc4o3/Normalizado2_convivencia%20neutro.ogg?raw=1";
+    public static final String ALONE_MP3_URL_FEM = "https://www.dropbox.com/s/eh4dlqxcpgpy46e/Normalizado2_convivencia%20femenino.ogg?raw=1";
+    public static final String ALONE_MP3_URL_MASC = "https://www.dropbox.com/s/xj4zh2t8spiybz1/Normalizado2_convivencia%20masculino.ogg?raw=1";
+    public static final String ALONE_MP3_DESC = "En la actualidad, ¿está viviendo solo o sola? Conteste Sí, No, Prefiero no contestar.";
+    public static final String ALONE_MP3_DESC_FEM = "En la actualidad, ¿está viviendo sola? Conteste Sí, No, Prefiero no contestar.";
+    public static final String ALONE_MP3_DESC_MASC = "En la actualidad, ¿está viviendo solo? Conteste Sí, No, Prefiero no contestar.";
 
-    public static final String ALONE_QUESTION_MP3_URL = "https://www.dropbox.com/s/ejlzt7474dfzj6z/solo%20o%20sola.ogg?raw=1";
-    public static final String ALONE_QUESTION_MP3_URL_FEM = "https://www.dropbox.com/s/2sih9mpf33sbkp4/Sola.ogg?raw=1";
-    public static final String ALONE_QUESTION_MP3_URL_MASC = "https://www.dropbox.com/s/c5qlvp06e92fmcp/solo.ogg?raw=1";
-    public static final String ALONE_QUESTION_MP3_DESC = "Hábleme de cuándo se siente solo o sola.";
+    public static final String ALONE_QUESTION_MP3_URL = "https://www.dropbox.com/s/50a9fsdobre9h4s/Normalizado2_solo-a%20Neutro.ogg?raw=1";
+    public static final String ALONE_QUESTION_MP3_URL_FEM = "https://www.dropbox.com/s/i6k9yhe82e9uhuu/Normalizado2_sola%20F.ogg?raw=1";
+    public static final String ALONE_QUESTION_MP3_URL_MASC = "https://www.dropbox.com/s/78n9f4w91gw4k6f/Normalizado2_solo%20M.ogg?raw=1";
+    public static final String ALONE_QUESTION_MP3_DESC = "Hábleme de cuándo se siente sola o solo.";
     public static final String ALONE_QUESTION_MP3_DESC_FEM = "Hábleme de cuándo se siente sola.";
     public static final String ALONE_QUESTION_MP3_DESC_MASC = "Hábleme de cuándo se siente solo";
 
-    public static final String NOT_ALONE_QUESTION_MP3_URL = "https://www.dropbox.com/s/zn69ot4wykooy4d/no%20s%C3%B3lo%20o%20sola.ogg?raw=1";
-    public static final String NOT_ALONE_QUESTION_MP3_URL_FEM = "https://www.dropbox.com/s/w12nfgc75uqtjgy/no%20sola.ogg?raw=1";
-    public static final String NOT_ALONE_QUESTION_MP3_URL_MASC = "https://www.dropbox.com/s/pxztyfls449ax63/no%20solo.ogg?raw=1";
-    public static final String NOT_ALONE_QUESTION_MP3_DESC = "Hábleme de cuándo NO se siente solo o sola.";
+    public static final String NOT_ALONE_QUESTION_MP3_URL = "https://www.dropbox.com/s/k8p6kxttwx7uxtu/Normalizado2_no%20solo%20N.ogg?raw=1";
+    public static final String NOT_ALONE_QUESTION_MP3_URL_FEM = "https://www.dropbox.com/s/dbzv4wu06w1ik21/Normalizado2_no%20sola%20F.ogg?raw=1";
+    public static final String NOT_ALONE_QUESTION_MP3_URL_MASC = "https://www.dropbox.com/s/siqtdf70lkwqafn/Normalizado2_no%20solo%20M.ogg?raw=1";
+    public static final String NOT_ALONE_QUESTION_MP3_DESC = "Hábleme de cuándo NO se siente sola o solo.";
     public static final String NOT_ALONE_QUESTION_MP3_DESC_FEM = "Hábleme de cuándo NO se siente sola.";
     public static final String NOT_ALONE_QUESTION_MP3_DESC_MASC = "Hábleme de cuándo NO se siente solo";
 
-    public static final String FREE_QUESTION_MP3_URL = "https://www.dropbox.com/s/uw0t88lm7wqo9nv/abierta.ogg?raw=1";
-    public static final String FREE_QUESTION_MP3_DESC = "¿Cómo le ha ido la semana?";
+    public static final String FREE_QUESTION_MP3_URL = "https://www.dropbox.com/s/dyz7e2vqx3p6omo/Normalizado2_abierta%20modificado.ogg?raw=1";
+    public static final String FREE_QUESTION_MP3_DESC = "Por último, me gustaría que me contara cómo le ha ido la semana?";
 
-    public static final String UCLA1_MP3_URL = "https://www.dropbox.com/s/9n41cvj8y5irmoe/ucla%201.ogg?raw=1";
-    public static final String UCLA1_MP3_DESC = "Ahora voy a hacerle tres preguntas de un test. ¿Con qué frecuencia siente que le falta compañía? Conteste Casi nunca, Algunas veces, A menudo.";
+    public static final String UCLA1_MP3_URL = "https://www.dropbox.com/s/k039rtordqnozc2/Normalizado2_ucla%201.ogg?raw=1";
+    public static final String UCLA1_MP3_DESC = "Voy a hacerle tres preguntas, responda pensando en esta última semana. ¿Con qué frecuencia siente que le falta compañía? Conteste Casi nunca, Algunas veces, A menudo.";
 
-    public static final String UCLA2_MP3_URL = "https://www.dropbox.com/s/9f2cid1xodm6700/ucla%202%20neutra.ogg?raw=1";
-    public static final String UCLA2_MP3_URL_FEM = "https://www.dropbox.com/s/lk3crsi2kf9kx1w/ucla%202%20femenino.ogg?raw=1";
-    public static final String UCLA2_MP3_URL_MASC = "https://www.dropbox.com/s/9gteb6avolfjpuk/ucla%202%20masculino.ogg?raw=1";
+    public static final String UCLA2_MP3_URL = "https://www.dropbox.com/s/68fgn1u9tc649oj/Normalizado2_ucla%202%20N.ogg?raw=1";
+    public static final String UCLA2_MP3_URL_FEM = "https://www.dropbox.com/s/kem1y4ndg82fuu8/Normalizado2_ucla%202%20F.ogg?raw=1";
+    public static final String UCLA2_MP3_URL_MASC = "https://www.dropbox.com/s/mhtcjyu8wdpznuz/Normalizado2_ucla%202%20M.ogg?raw=1";
     public static final String UCLA2_MP3_DESC = "¿Con qué frecuencia se siente excluida o excluido? Conteste: Casi nunca, Algunas veces o A menudo";
     public static final String UCLA2_MP3_DESC_FEM = "¿Con qué frecuencia se siente excluida? Conteste: Casi nunca, Algunas veces o A menudo";
     public static final String UCLA2_MP3_DESC_MASC = "¿Con qué frecuencia se siente excluido? Conteste: Casi nunca, Algunas veces o A menudo";
 
-    public static final String UCLA3_MP3_URL = "https://www.dropbox.com/s/9rl09x6owywoqsd/ucla%203%20neutro.ogg?raw=1";
-    public static final String UCLA3_MP3_URL_FEM = "https://www.dropbox.com/s/64zywdc2nb7so5v/ucla%203%20femenino.ogg?raw=1";
-    public static final String UCLA3_MP3_URL_MASC = "https://www.dropbox.com/s/xoicnkfg7c4telz/ucla%203%20masculino.ogg?raw=1";
+    public static final String UCLA3_MP3_URL = "https://www.dropbox.com/s/dw7g0e9g886i482/Normalizado2_ucla%203%20n.ogg?raw=1";
+    public static final String UCLA3_MP3_URL_FEM = "https://www.dropbox.com/s/5b9rlrga507j6jc/Normalizado2_ucla%203%20F.ogg?raw=1";
+    public static final String UCLA3_MP3_URL_MASC = "https://www.dropbox.com/s/nznwmbp673s03ue/Normalizado2_ucla%203%20M.ogg?raw=1";
     public static final String UCLA3_MP3_DESC = "¿Con qué frecuencia se siente aislado o aislada de los demás? Conteste: Casi nunca, Algunas veces o A menudo";
     public static final String UCLA3_MP3_DESC_FEM = "¿Con qué frecuencia se siente aislada de los demás? Conteste: Casi nunca, Algunas veces o A menudo";
     public static final String UCLA3_MP3_DESC_MASC = "¿Con qué frecuencia se siente aislado de los demás? Conteste: Casi nunca, Algunas veces o A menudo";
 
 
     /* Not valid intent MP3 and Descriptions (shown text) */
-    public static final String NOT_VALID_SEX_ANSWER = "Tiene que indicar un género válido (Femenino, Masculino, Otro, Prefiero no contestar)";
-    public static final String NOT_VALID_SEX_MP3 = "https://www.dropbox.com/s/vq11jgywq7p7ior/fallo%20g%C3%A9nero.ogg?raw=1";
+    public static final String NOT_VALID_SEX_ANSWER = "Debe indicar (Femenino, Masculino, Otro, Prefiero no contestar)";
+    public static final String NOT_VALID_SEX_MP3 = "https://www.dropbox.com/s/dtleads1d4sflzd/Normalizado2_error%20genero.ogg?raw=1";
 
-    public static final String NOT_VALID_AGE_ANSWER = "Tiene que indicar un número válido entre 16 y 105. Si lo prefiere puede indicar Prefiero no contestar";
-    public static final String NOT_VALID_AGE_MP3 = "https://www.dropbox.com/s/6sor3nti93gtbm0/fallo%20edad.ogg?raw=1";
+    public static final String NOT_VALID_AGE_ANSWER = "Debe indicar un número entre 16 y 105. Si lo prefiere diga Prefiero no contestar";
+    public static final String NOT_VALID_AGE_MP3 = "https://www.dropbox.com/s/32z2txiuz6g43cd/Normalizado2_error%20edad%20buena.ogg?raw=1";
 
     public static final String NOT_VALID_ALONE_ANSWER = "Tiene que indicar Sí, No, Prefiero no contestar";
-    public static final String NOT_VALID_ALONE_MP3 = "https://www.dropbox.com/s/xhpjn4haik4pzku/fallo%20convivencia.ogg?raw=1";
+    public static final String NOT_VALID_ALONE_MP3 = "https://www.dropbox.com/s/hgeawhn70aq3j68/Normalizado2_error%20convivencia.ogg?raw=1";
 
     public static final String NOT_VALID_UCLA_ANSWER = "Su respuesta debe ser Casi nunca, Algunas veces, A menudo";
-    public static final String NOT_VALID_UCLA_MP3 = "https://www.dropbox.com/s/44bk8b6rupkgj0n/ucla%20fallo.ogg?raw=1";
+    public static final String NOT_VALID_UCLA_MP3 = "https://www.dropbox.com/s/lwggrfg69mg8bqz/Normalizado2_ucla%20error.ogg?raw=1";
 
-    public static final String END_CONVERSATION_DESC = "Gracias por hablar conmigo. Hasta la próxima.";
-    public static final String END_CONVERSATION_MP3 = "https://www.dropbox.com/s/llk7hn611847tpg/fin%20despedida.ogg?raw=1";
+    public static final String END_CONVERSATION_DESC = "Gracias por conversar conmigo. Hasta la próxima.";
+    public static final String END_CONVERSATION_MP3 = "https://www.dropbox.com/s/5fja5ibi7logvot/Normalizado2_despedida.ogg?raw=1";
 }

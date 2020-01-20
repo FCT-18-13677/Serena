@@ -3,11 +3,9 @@ package es.uji.giant.Serena.intents;
 import com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2WebhookRequest;
 import com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2WebhookResponse;
 import es.uji.giant.Serena.model.Questionnarie;
-import es.uji.giant.Serena.repository.QuestionnarieDao;
 import es.uji.giant.Serena.utils.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 
@@ -21,9 +19,9 @@ public class UCLA3Intent extends Intent {
 
         if (isValidInput(parameter)) {
             saveInfo(questionnaries, parameter, request.getSession());
-            audio = Constants.END_CONVERSATION_MP3;
-            desc = Constants.END_CONVERSATION_DESC;
-            contextName = request.getSession() + "/contexts/end";
+            audio = Constants.FREE_QUESTION_MP3_URL;
+            desc = Constants.FREE_QUESTION_MP3_DESC;
+            contextName = request.getSession() + "/contexts/free";
         } else {
             audio = Constants.NOT_VALID_UCLA_MP3;
             desc = Constants.NOT_VALID_UCLA_ANSWER;
@@ -43,11 +41,6 @@ public class UCLA3Intent extends Intent {
     public void saveInfo(Map<String, Questionnarie> activeQuestionnaries, String parameter, String session) {
         if (activeQuestionnaries.containsKey(session)) {
             activeQuestionnaries.get(session).getAnswers().add(parameter);
-
-            activeQuestionnaries.get(session).calculateUCLAScore();
-            activeQuestionnaries.get(session).setTimestamp(System.currentTimeMillis());
-            QuestionnarieDao.insertQuestionnarie(session, activeQuestionnaries.get(session));
-            activeQuestionnaries.remove(session);
         }
     }
 }

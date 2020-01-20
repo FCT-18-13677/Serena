@@ -17,36 +17,13 @@ public class AloneQuestionIntent extends Intent {
     public GoogleCloudDialogflowV2WebhookResponse generateResponseForIntent(GoogleCloudDialogflowV2WebhookRequest request, Map<String, Questionnarie> questionnaries) {
         String parameter = String.valueOf(request.getQueryResult().getParameters().get("val")), audio, desc, contextName;
         saveInfo(questionnaries, parameter, request.getSession());
+        String[] chips = Constants.UCLA_CHIPS;
 
-        audio = getAudioFromSex(questionnaries, request.getSession());
-        desc = getDescFromSex(questionnaries, request.getSession());
-        contextName = request.getSession() + "/contexts/non_loneliness";
+        audio = Constants.UCLA1_MP3_URL;
+        desc = Constants.UCLA1_MP3_DESC;
+        contextName = request.getSession() + "/contexts/ucla1";
 
-        return fillResponse(audio, desc, null, contextName);
-    }
-
-    private String getAudioFromSex(Map<String, Questionnarie> questionnaries, String session) {
-        if (questionnaries.containsKey(session)) {
-            Questionnarie q = questionnaries.get(session);
-            if (q.isMale()) return Constants.NOT_ALONE_QUESTION_MP3_URL_MASC;
-            if (q.isFemale()) return Constants.NOT_ALONE_QUESTION_MP3_URL_FEM;
-            else return Constants.NOT_ALONE_QUESTION_MP3_URL;
-        } else {
-            LOG.info("ERROR EN ALONEINTENT getAudio");
-            return null;
-        }
-    }
-
-    private String getDescFromSex(Map<String, Questionnarie> questionnaries, String session) {
-        if (questionnaries.containsKey(session)) {
-            Questionnarie q = questionnaries.get(session);
-            if (q.isMale()) return Constants.NOT_ALONE_QUESTION_MP3_DESC_MASC;
-            if (q.isFemale()) return Constants.NOT_ALONE_QUESTION_MP3_DESC_FEM;
-            else return Constants.NOT_ALONE_QUESTION_MP3_DESC;
-        } else {
-            LOG.info("ERROR EN ALONEINTENT getDesc");
-            return null;
-        }
+        return fillResponse(audio, desc, chips, contextName);
     }
 
     @Override

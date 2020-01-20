@@ -23,7 +23,7 @@ public class AloneIntent extends Intent {
             audio = getAudioFromSex(questionnaries, request.getSession());
             desc = getDescFromSex(questionnaries, request.getSession());
             chips = null;
-            contextName = request.getSession() + "/contexts/loneliness";
+            contextName = request.getSession() + "/contexts/non_loneliness";
         } else {
             audio = Constants.NOT_VALID_ALONE_MP3;
             desc = Constants.NOT_VALID_ALONE_ANSWER;
@@ -37,9 +37,9 @@ public class AloneIntent extends Intent {
     private String getAudioFromSex(Map<String, Questionnarie> questionnaries, String session) {
         if (questionnaries.containsKey(session)) {
             Questionnarie q = questionnaries.get(session);
-            if (q.isMale()) return Constants.ALONE_QUESTION_MP3_URL_MASC;
-            if (q.isFemale()) return Constants.ALONE_QUESTION_MP3_URL_FEM;
-            else return Constants.ALONE_QUESTION_MP3_URL;
+            if (q.isMale()) return Constants.NOT_ALONE_QUESTION_MP3_URL_MASC;
+            if (q.isFemale()) return Constants.NOT_ALONE_QUESTION_MP3_URL_FEM;
+            else return Constants.NOT_ALONE_QUESTION_MP3_URL;
         } else {
             LOG.info("ERROR EN ALONEINTENT getAudio");
             return null;
@@ -49,9 +49,9 @@ public class AloneIntent extends Intent {
     private String getDescFromSex(Map<String, Questionnarie> questionnaries, String session) {
         if (questionnaries.containsKey(session)) {
             Questionnarie q = questionnaries.get(session);
-            if (q.isMale()) return Constants.ALONE_QUESTION_MP3_DESC_MASC;
-            if (q.isFemale()) return Constants.ALONE_QUESTION_MP3_DESC_FEM;
-            else return Constants.ALONE_QUESTION_MP3_DESC;
+            if (q.isMale()) return Constants.NOT_ALONE_QUESTION_MP3_DESC_MASC;
+            if (q.isFemale()) return Constants.NOT_ALONE_QUESTION_MP3_DESC_FEM;
+            else return Constants.NOT_ALONE_QUESTION_MP3_DESC;
         } else {
             LOG.info("ERROR EN ALONEINTENT getDesc");
             return null;

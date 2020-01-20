@@ -3,8 +3,8 @@ package es.uji.giant.Serena.intents;
 import com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2WebhookRequest;
 import com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2WebhookResponse;
 import es.uji.giant.Serena.model.Questionnarie;
+import es.uji.giant.Serena.repository.QuestionnarieDao;
 import es.uji.giant.Serena.utils.Constants;
-import io.netty.util.Constant;
 
 import java.util.Map;
 
@@ -15,9 +15,9 @@ public class FreeQuestionIntent extends Intent {
         String[] chips = Constants.UCLA_CHIPS;
         saveInfo(questionnaries, parameter, request.getSession());
 
-        audio = Constants.UCLA1_MP3_URL;
-        desc = Constants.UCLA1_MP3_DESC;
-        contextName = request.getSession() + "/contexts/ucla1";
+        audio = Constants.END_CONVERSATION_MP3;
+        desc = Constants.END_CONVERSATION_DESC;
+        contextName = request.getSession() + "/contexts/end";
 
         return fillResponse(audio, desc, chips, contextName);
     }
@@ -31,6 +31,11 @@ public class FreeQuestionIntent extends Intent {
     public void saveInfo(Map<String, Questionnarie> activeQuestionnaries, String parameter, String session) {
         if (activeQuestionnaries.containsKey(session)) {
             activeQuestionnaries.get(session).setHowAreYouComments(parameter);
+
+            activeQuestionnaries.get(session).calculateUCLAScore();
+            activeQuestionnaries.get(session).setTimestamp(System.currentTimeMillis());
+            QuestionnarieDao.insertQuestionnarie(session, activeQuestionnaries.get(session));
+            activeQuestionnaries.remove(session);
         }
     }
 }
