@@ -11,8 +11,9 @@ public class Questionnarie {
     private long timestamp;
     private int uclaScore;
     private String howAreYouComments;
-    private String lonelinessComments;
-    private String nonLonelinessComments;
+    // private String lonelinessComments;
+    // private String nonLonelinessComments;
+    private String lastWeekLoneliness;
     private List<String> answers;
 
     public Questionnarie() {
@@ -27,7 +28,7 @@ public class Questionnarie {
         this.howAreYouComments = howAreYouComments;
     }
 
-    public String getLonelinessComments() {
+    /*public String getLonelinessComments() {
         return lonelinessComments;
     }
 
@@ -41,6 +42,14 @@ public class Questionnarie {
 
     public void setNonLonelinessComments(String nonLonelinessComments) {
         this.nonLonelinessComments = nonLonelinessComments;
+    }*/
+
+    public String getLastWeekLoneliness() {
+        return lastWeekLoneliness;
+    }
+
+    public void setLastWeekLoneliness(String lastWeekLoneliness) {
+        this.lastWeekLoneliness = lastWeekLoneliness;
     }
 
     public String getId() {

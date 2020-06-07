@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-public class AloneQuestionIntent extends Intent {
+/*public class AloneQuestionIntent extends Intent {
 
     private static final Logger LOG = LoggerFactory.getLogger(AloneQuestionIntent.class);
 
@@ -37,4 +37,4 @@ public class AloneQuestionIntent extends Intent {
             activeQuestionnaries.get(session).setLonelinessComments(parameter);
         }
     }
-}
+}*/

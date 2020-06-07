@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-public class NotAloneQuestionIntent extends Intent {
+/*public class NotAloneQuestionIntent extends Intent {
 
     private static final Logger LOG = LoggerFactory.getLogger(AloneQuestionIntent.class);
 
@@ -59,4 +59,4 @@ public class NotAloneQuestionIntent extends Intent {
             activeQuestionnaries.get(session).setNonLonelinessComments(parameter);
         }
     }
-}
+}*/

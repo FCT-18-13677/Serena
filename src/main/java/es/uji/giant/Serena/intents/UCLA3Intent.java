@@ -16,19 +16,44 @@ public class UCLA3Intent extends Intent {
     @Override
     public GoogleCloudDialogflowV2WebhookResponse generateResponseForIntent(GoogleCloudDialogflowV2WebhookRequest request, Map<String, Questionnarie> questionnaries) {
         String parameter = String.valueOf(request.getQueryResult().getParameters().get("val")), audio, desc, contextName;
+        String[] chips = Constants.UCLA_CHIPS;
 
         if (isValidInput(parameter)) {
             saveInfo(questionnaries, parameter, request.getSession());
-            audio = Constants.FREE_QUESTION_MP3_URL;
-            desc = Constants.FREE_QUESTION_MP3_DESC;
-            contextName = request.getSession() + "/contexts/free";
+            audio = getAudioFromSex(questionnaries, request.getSession());
+            desc = getDescFromSex(questionnaries, request.getSession());
+            contextName = request.getSession() + "/contexts/alone_frequency";
         } else {
             audio = Constants.NOT_VALID_UCLA_MP3;
             desc = Constants.NOT_VALID_UCLA_ANSWER;
             contextName = request.getSession() + "/contexts/ucla3";
         }
 
-        return fillResponse(audio, desc, null, contextName);
+        return fillResponse(audio, desc, chips, contextName);
+    }
+
+    private String getAudioFromSex(Map<String, Questionnarie> questionnaries, String session) {
+        if (questionnaries.containsKey(session)) {
+            Questionnarie q = questionnaries.get(session);
+            if (q.isMale()) return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_URL_MASC;
+            if (q.isFemale()) return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_URL_FEM;
+            else return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_URL;
+        } else {
+            LOG.info("ERROR EN ALONEFREQUENCYINTENT getAudio");
+            return null;
+        }
+    }
+
+    private String getDescFromSex(Map<String, Questionnarie> questionnaries, String session) {
+        if (questionnaries.containsKey(session)) {
+            Questionnarie q = questionnaries.get(session);
+            if (q.isMale()) return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_DESC_MASC;
+            if (q.isFemale()) return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_DESC_FEM;
+            else return Constants.LONELINESS_FREQUENCY_QUESTION_MP3_DESC;
+        } else {
+            LOG.info("ERROR EN ALONEFREQUENCYINTENT getDesc");
+            return null;
+        }
     }
 
     @Override

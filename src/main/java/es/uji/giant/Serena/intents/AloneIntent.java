@@ -20,10 +20,10 @@ public class AloneIntent extends Intent {
 
         if (isValidInput(parameter)) {
             saveInfo(questionnaries, parameter, request.getSession());
-            audio = getAudioFromSex(questionnaries, request.getSession());
-            desc = getDescFromSex(questionnaries, request.getSession());
-            chips = null;
-            contextName = request.getSession() + "/contexts/non_loneliness";
+            audio = Constants.UCLA1_MP3_URL;
+            desc = Constants.UCLA1_MP3_DESC;
+            chips = Constants.UCLA_CHIPS;
+            contextName = request.getSession() + "/contexts/ucla1";
         } else {
             audio = Constants.NOT_VALID_ALONE_MP3;
             desc = Constants.NOT_VALID_ALONE_ANSWER;
@@ -34,7 +34,7 @@ public class AloneIntent extends Intent {
         return fillResponse(audio, desc, chips, contextName);
     }
 
-    private String getAudioFromSex(Map<String, Questionnarie> questionnaries, String session) {
+    /*private String getAudioFromSex(Map<String, Questionnarie> questionnaries, String session) {
         if (questionnaries.containsKey(session)) {
             Questionnarie q = questionnaries.get(session);
             if (q.isMale()) return Constants.NOT_ALONE_QUESTION_MP3_URL_MASC;
@@ -56,7 +56,7 @@ public class AloneIntent extends Intent {
             LOG.info("ERROR EN ALONEINTENT getDesc");
             return null;
         }
-    }
+    }*/
 
     @Override
     public boolean isValidInput(String input) {
