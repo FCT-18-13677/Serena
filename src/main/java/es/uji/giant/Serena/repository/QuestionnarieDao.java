@@ -26,7 +26,7 @@ import java.util.Map;
 
 @Repository
 public class QuestionnarieDao {
-    private static final Logger LOG = LoggerFactory.getLogger(QuestionnarieDao.class);
+    //private static final Logger LOG = LoggerFactory.getLogger(QuestionnarieDao.class);
     private static final String INDEX = Constants.ELASTICSEARCH_TEST_INDEX;
     private static final String TYPE = Constants.ELASTICSEARCH_TEST_TYPE;
 
@@ -46,7 +46,7 @@ public class QuestionnarieDao {
 
         try {
             IndexResponse response = restHighLevelClient.index(indexRequest, RequestOptions.DEFAULT);
-            LOG.info("Response -> " + response);
+            //LOG.info("Response -> " + response);
         } catch (IOException e) {
             e.printStackTrace();
         }
